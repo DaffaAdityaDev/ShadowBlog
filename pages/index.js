@@ -18,7 +18,6 @@ export default function Home({posts}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1>helo</h1>
       <div className="posts">
         {posts.map((post, index) => {
           return (

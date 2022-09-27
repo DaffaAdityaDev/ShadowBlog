@@ -1,9 +1,10 @@
 import Link from 'next/link'
+import style from './Header.module.scss'
 
 function Header() {
   return (
     <header>
-        <div className='container'>
+        <div className={style.header}>
           <Link href='/' passHref>
             <h2 className='logo'>Shadow Blog</h2>
           </Link>
@@ -12,4 +13,4 @@ function Header() {
   )
 }
 
-export default Header
+export default Header 
