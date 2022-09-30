@@ -4,12 +4,14 @@ import Image from 'next/image'
 import matter from 'gray-matter'
 import fs from 'fs'
 import path from 'path'
+
 import Post from '../components/Post'
+import Container from '../container'
 
 import { sortByDate } from '../utils'
+import PostContainer from '../container/PostContainer'
 
 export default function Home({posts}) {
-  // console.log(posts)
   return (
     <div>
       <Head>
@@ -18,13 +20,13 @@ export default function Home({posts}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="posts">
+      <PostContainer>
         {posts.map((post, index) => {
           return (
             <Post key={index} post={post}/>
           )
         })}
-      </div>
+      </PostContainer>
     </div>
   )
 }

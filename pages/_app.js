@@ -1,13 +1,14 @@
 import Header from "../components/Header"
-import style from '../styles/globals.css'
+import Container from '../container'
+import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Header />
-      <main className='container'>
+    <Header />
+      <Container>
         <Component {...pageProps} />
-      </main>
+      </Container>
     </>
   )
 }
