@@ -3,8 +3,8 @@ import style from './Header.module.scss'
 
 function Header() {
   return (
-    <header>
-        <div className={style.header}>
+    <header className={style.header}>
+        <div className={style.container}>
           <Link href='/' passHref>
             <h2 className='logo'>Shadow Blog</h2>
           </Link>

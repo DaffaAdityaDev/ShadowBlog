@@ -4,23 +4,30 @@ import path from 'path';
 import matter from 'gray-matter'
 import {marked} from 'marked'
 import Link from 'next/link';
+
+import style from '../../styles/Slug.module.scss'
+
+marked.setOptions({
+  sanitize: false,
+})
 function Postpage({ frontmatter: {title, date, cover_image}, slug, content }) {
-  // console.log(content)
+  
   return (
-    <>
+    <div className={style.container}>
       <Link href="/">
-        <a className="btn btn-back">Go Back</a>
+        <a>Go Back</a>
       </Link>
-      <div className="card card-page">
-        <h1 className="post-title">{title}</h1>
-        <div className="post-date">Posted on {date}</div>
-        <img src={cover_image} alt="" />
+    
+      <div>
+        <h1>{title}</h1>
+        <div>Posted on {date}</div>
+        <img src={cover_image} alt="" className={style.img__hero}/>
         
-        <div className="post-body">
+        <div>
           <div dangerouslySetInnerHTML={{ __html: marked(content)}}></div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
@@ -32,8 +39,6 @@ export async function getStaticPaths() {
       slug: filename.replace('.md', ''),
     },
   }))
-
-  console.log(paths)
 
   return {
     
