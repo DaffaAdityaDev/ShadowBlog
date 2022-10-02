@@ -3,6 +3,8 @@ title: 'React Crash Course'
 date: 'March 8, 2021'
 excerpt: 'Crash course to learn the React JavaScript library. We will look at components, hooks and more'
 cover_image: '/images/posts/img5.jpg'
+read_time: '5 min'
+tech: "Javascript"
 ---
 
 Lorem markdownum fine incustoditam unda factura versum occuluere Aeneas, iuvat
@@ -25,11 +27,12 @@ consequitur et quoque scinditque in. Ratis laborum instabat quaedam partem
 Phoebus, manus _partibus poenas_. Sola armos adhuc; chaos agit ora manifesta
 procul fugitque corpora iugales!
 
-<iframe src="https://codesandbox.io/embed/infallible-rgb-9rsz00?autoresize=1&fontsize=14&theme=dark"
+<iframe src="https://codesandbox.io/embed/infallible-rgb-9rsz00?autoresize=1&fontsize=14&hidenavigation=1&module=%2Fsrc%2FLoginForm.js&theme=dark&view=editor"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
      title="infallible-rgb-9rsz00"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"></iframe>
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
 
 ## O contra diu
 

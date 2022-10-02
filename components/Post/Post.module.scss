@@ -1,9 +1,39 @@
+$small-device: 600px;
+$medium-device: 900px;
+$large-device: 1200px;
+
 .container {
-    width: 350px;
+    width: 400px;
     
     img {
         object-fit: cover;
         width: 100%;
-        height: 250px;
+        height: 50%;
+    }
+
+    .card__description {
+        color:red;
+    }
+
+    &__detail {
+        display: flex;
+        gap: 10px;
+        margin-top: 1em;
+    }
+
+    
+}
+
+@media screen and (min-width: $small-device) {
+    
+}
+
+@media screen and (min-width: $medium-device) {
+    
+}
+
+@media screen and (min-width: $large-device) {
+    .container {
+        width: 590px;
     }
 }
