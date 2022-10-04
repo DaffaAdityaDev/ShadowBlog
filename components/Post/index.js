@@ -1,7 +1,10 @@
 import Link from 'next/link'
 import style from './Post.module.scss'
+
+
 function Post({ post }) {
-  console.log(post)
+
+  const tech = post.frontmatter.tech
   return (
     <div className={style.container}>
       <Link href={`/blog/${post.slug}`}>
@@ -12,12 +15,16 @@ function Post({ post }) {
           <div className={style.container__detail}>
             <p>{post.frontmatter.date}</p>
             <p>{post.frontmatter.read_time}</p>
-            <p>{post.frontmatter.tech}</p>
+            {post.frontmatter.tech ?
+            <p className={style.tech}>{post.frontmatter.tech}</p>
+            : null}
           </div>
         </div>
       </Link>
     </div>
   )
 }
+
+
 
 export default Post
