@@ -4,7 +4,7 @@ date: 'March 8, 2021'
 excerpt: 'Crash course to learn the React JavaScript library. We will look at components, hooks and more'
 cover_image: '/images/posts/img5.jpg'
 read_time: '5 min'
-tech: "Javascript"
+tech: "React"
 ---
 
 Lorem markdownum fine incustoditam unda factura versum occuluere Aeneas, iuvat
