@@ -22,7 +22,16 @@ React is a JavaScript library for building user interfaces. It's a front-end fra
 
 ## Let's try make something with react
 
-We're going to make a simple counter app. A basic way to learn react.
+We're going to make a simple counter app. First thing you need install the following link: 
+
+[Node.js](https://nodejs.org/en/)
+[npm](https://www.npmjs.com/get-npm)
+
+### why we need node.js and npm?
+
+Node.js is a JavaScript runtime environment. It's used to run JavaScript code outside of a browser. npm is a package manager for JavaScript. It's used to install and manage packages. 
+
+
 
 <iframe src="https://codesandbox.io/embed/cold-firefly-iydsj6?autoresize=1&fontsize=14&hidenavigation=1&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
@@ -30,3 +39,7 @@ We're going to make a simple counter app. A basic way to learn react.
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts">
 </iframe>
+
+> Dorothy followed her through many of the beautiful rooms in her castle.
+>
+> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
