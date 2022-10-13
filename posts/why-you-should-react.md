@@ -25,7 +25,7 @@ React is a JavaScript library for building user interfaces. It's a front-end fra
 We're going to make a simple counter app. First thing you need install the following link: 
 
 [Node.js](https://nodejs.org/en/)
-[npm](https://www.npmjs.com/get-npm)
+[npm](https://www.npmjs.com/get-npm) 
 
 ### why we need node.js and npm?
 
