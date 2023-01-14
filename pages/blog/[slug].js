@@ -4,7 +4,7 @@ import path from 'path';
 import matter from 'gray-matter'
 import {marked} from 'marked'
 import Link from 'next/link';
-
+import { Box } from '@chakra-ui/react'
 
 import style from '../../styles/Slug.module.scss'
 
@@ -16,7 +16,7 @@ function Postpage({ frontmatter: {title, date, cover_image}, slug, content }) {
   return (
     <div className={style.container}>
       <Link href="/">
-        <a>Go Back</a>
+        Go Back
       </Link>
     
       <div>

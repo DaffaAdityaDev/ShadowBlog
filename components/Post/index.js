@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import style from './Post.module.scss'
+import { Box, Flex, Image, Text } from '@chakra-ui/react'
 
 
 function Post({ post }) {
@@ -7,18 +8,21 @@ function Post({ post }) {
 
   return (
       <Link href={`/blog/${post.slug}`}>
-        <div className={style.container}>
-          <img src={post.frontmatter.cover_image} alt='image'/>
-          <h1>{post.frontmatter.title}</h1>
-          <p className={style.card__description}>{post.frontmatter.excerpt}</p>
-          <div className={style.container__detail}>
-            <p>{post.frontmatter.date}</p>
-            <p>{post.frontmatter.read_time}</p>
-            {post.frontmatter.tech ?
-              <p className={typeColor(tech)}>{post.frontmatter.tech}</p>
-            : null}
-          </div>
-        </div>
+        <Box width="350px">
+          <Image src={post.frontmatter.cover_image} alt='image' 
+            width={350} height={175} objectFit='cover'/>
+          <Flex flexDirection="column" height="100%" justifyContent="space-between">
+            <Text fontSize="24px" fontWeight="600">{post.frontmatter.title}</Text>
+            <Text as="p" fontSize="16px" fontWeight="400">{post.frontmatter.excerpt}</Text>
+            <Flex alignItems="center" gap="10px" margin-top="1em">
+              <Text>{post.frontmatter.date}</Text>
+              <Text>{post.frontmatter.read_time}</Text>
+              {post.frontmatter.tech ?
+                <Text sx={typeColor(tech)}>{post.frontmatter.tech}</Text>
+              : null}
+            </Flex>
+          </Flex>
+        </Box>
       </Link>
   )
 }
@@ -26,10 +30,20 @@ function Post({ post }) {
 function typeColor(arg) {
   switch(arg) {
     case "Javascript":
-      return style.tech;
+      return {
+        backgroundColor: "#fff700",
+        paddingX: "1em",
+        fontWeight: "600",
+        borderRadius: "15px",
+      };
       
     case "React":
-      return style.react;
+      return {
+        backgroundColor: "#7addf8",
+        fontWeight: "600",
+        paddingX: "0.5em",
+        borderRadius: "15px",
+      };
   }
 }
 

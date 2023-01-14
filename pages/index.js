@@ -10,6 +10,7 @@ import Container from '../container'
 
 import { sortByDate } from '../utils'
 import PostContainer from '../container/PostContainer'
+import { Flex } from '@chakra-ui/react'
 
 export default function Home({posts}) {
   return (
@@ -21,13 +22,13 @@ export default function Home({posts}) {
         
       </Head>
 
-      <PostContainer>
+      <Flex flexWrap="wrap" justifyContent="center" gap="10px">
         {posts.map((post, index) => {
           return (
             <Post key={index} post={post}/>
           )
         })}
-      </PostContainer>
+      </Flex>
     </div>
   )
 }
