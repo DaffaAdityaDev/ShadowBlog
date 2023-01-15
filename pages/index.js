@@ -22,7 +22,7 @@ export default function Home({posts}) {
         
       </Head>
 
-      <Flex flexWrap="wrap" justifyContent="center" gap="10px">
+      <Flex flexWrap="wrap" justifyContent="space-between" width="100%" pt="2rem">
         {posts.map((post, index) => {
           return (
             <Post key={index} post={post}/>
