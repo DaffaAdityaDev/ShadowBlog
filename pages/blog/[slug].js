@@ -21,7 +21,7 @@ function Postpage({ frontmatter: {title, date, cover_image}, slug, content }) {
     
       <div>
         <Text fontSize="32px" fontWeight="600">{title}</Text>
-        <div>Posted on {date}</div>
+        <Text>Posted on {date}</Text>
         <img src={cover_image} alt="" className={style.img__hero}/>
         
         <div className={style.container}>
@@ -30,7 +30,7 @@ function Postpage({ frontmatter: {title, date, cover_image}, slug, content }) {
       </div>
     </Container>
   )
-}
+} 
 
 export async function getStaticPaths() {
   const files = fs.readdirSync(path.join('posts'))
