@@ -31,7 +31,7 @@ function Postpage({ frontmatter: {title, date, cover_image}, slug, content }) {
     </Container>
   )
 } 
-
+ 
 export async function getStaticPaths() {
   const files = fs.readdirSync(path.join('posts'))
 
