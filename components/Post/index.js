@@ -7,6 +7,7 @@ function Post({ post }) {
   const tech = post.frontmatter.tech
 
   return (
+    
       <Link href={`/blog/${post.slug}`}>
         <Box width="350px">
           <Image src={post.frontmatter.cover_image} alt='image' 

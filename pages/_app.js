@@ -7,11 +7,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
     <Header />
-    <ChakraProvider>
-      <Container maxW='1200px'>
+      <div className="container max-xl m-auto">
         <Component {...pageProps} />
-      </Container>
-    </ChakraProvider>
+      </div>
     
     </>
   )
