@@ -9,42 +9,39 @@ function Post({ post }) {
   return (
     
       <Link href={`/blog/${post.slug}`}>
-        <Box width="350px">
-          <Image src={post.frontmatter.cover_image} alt='image' 
-            width={350} height={175} objectFit='cover'/>
-          <Flex flexDirection="column" height="100%" justifyContent="space-between">
-            <Text fontSize="24px" fontWeight="600">{post.frontmatter.title}</Text>
-            <Text as="p" fontSize="16px" fontWeight="400">{post.frontmatter.excerpt}</Text>
-            <Flex alignItems="center" gap="10px" margin-top="1em">
-              <Text>{post.frontmatter.date}</Text>
-              <Text>{post.frontmatter.read_time}</Text>
+        <div className='w-[350px] rounded-lg'>
+          <div className='object-cover w-full relative'>
+          <div className='bg-gradient-to-t from-black from-1% to-transparent to-25% w-full h-full absolute rounded-t-lg'/>
+            <Image src={post.frontmatter.cover_image} alt='image' className='rounded-lg' 
+              width={350} height={250} objectFit='cover'/>
+          </div>
+          <div className='flex flex-col h-[10rem] justify-between bg-black rounded-b-lg'>
+            <div className='m-4'>
+              <p className='text-2xl font-bold mb-2 text-white'>{post.frontmatter.title}</p>
+              <p className='text-md font-normal text-white text-ellipsis
+                 overflow-hidden line-clamp-2'>{post.frontmatter.excerpt}</p>
+            </div>
+            <div className='flex items-center justify-between m-4'>
+              <p className='text-white'>{post.frontmatter.date}</p>
+              <p className='text-white'>{post.frontmatter.read_time}</p>
               {post.frontmatter.tech ?
-                <Text sx={typeColor(tech)}>{post.frontmatter.tech}</Text>
+                <p className={typeColor(tech)} >{tech}</p>
               : null}
-            </Flex>
-          </Flex>
-        </Box>
+            </div>
+          </div>
+        </div>
       </Link>
   )
 }
 
 function typeColor(arg) {
-  switch(arg) {
+  switch (arg) {
     case "Javascript":
-      return {
-        backgroundColor: "#fff700",
-        paddingX: "1em",
-        fontWeight: "600",
-        borderRadius: "15px",
-      };
-      
+      return "bg-yellow-400 px-4 font-semibold rounded-xl color-white h-7 flex items-center justify-center";
     case "React":
-      return {
-        backgroundColor: "#7addf8",
-        fontWeight: "600",
-        paddingX: "0.5em",
-        borderRadius: "15px",
-      };
+      return "bg-blue-400 px-4 font-semibold rounded-xl color-white h-7 flex items-center justify-center";
+    default:
+      return "";
   }
 }
 
