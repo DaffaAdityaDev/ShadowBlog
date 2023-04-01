@@ -26,6 +26,7 @@ function Hero() {
           </a>
         </div>
 
+        {/* Mobile-development box */}
         <div className='flex flex-col w-full h-full'>
           <div className='relative h-1/2'>
             <a>
@@ -50,6 +51,7 @@ function Hero() {
               <img src='/images/hero/phone.jpg' alt='Shadow' className='h-full w-full object-cover rounded-lg'/>  
             </a>
           </div>
+          
           
           <div className='flex h-1/2 pt-4 gap-4'>
             <div className='h-full w-full relative'>
