@@ -55,7 +55,7 @@ function Hero() {
           
           <div className='flex h-1/2 pt-4 gap-4'>
             <div className='h-full w-full relative'>
-              <a>
+              <a> 
                 <div className='w-full h-full absolute bg-black opacity-40 rounded-lg'/>
                 <div className='absolute flex flex-col justify-between h-full w-full p-1 pb-5 pl-5'>
                   <svg xmlns="http://www.w3.org/2000/svg" height="38" viewBox="0 96 960 960" width="38" className='fill-white rotate-[140deg] self-end'>
