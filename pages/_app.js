@@ -10,7 +10,6 @@ function MyApp({ Component, pageProps }) {
       <div className="container max-xl m-auto">
         <Component {...pageProps} />
       </div>
-    
     </>
   )
 }
