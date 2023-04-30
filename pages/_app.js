@@ -7,7 +7,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
     <Header />
-      <div className="container max-xl m-auto">
+    {/* divs */}
+      <div className="container max-xl m-auto"> 
         <Component {...pageProps} />
       </div>
     </>
