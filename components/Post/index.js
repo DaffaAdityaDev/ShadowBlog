@@ -7,7 +7,7 @@ function Post({ post }) {
   const tech = post.frontmatter.tech
 
   return (
-    
+  
       <Link href={`/blog/${post.slug}`}>
         <div className='w-[350px] rounded-lg'>
           <div className='object-cover w-full relative'>
