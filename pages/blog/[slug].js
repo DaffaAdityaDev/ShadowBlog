@@ -4,7 +4,6 @@ import path from 'path';
 import matter from 'gray-matter'
 import {marked} from 'marked'
 import Link from 'next/link';
-import { Box, Container, Text } from '@chakra-ui/react'
 
 import style from '../../styles/Slug.module.scss'
 
@@ -14,21 +13,21 @@ marked.setOptions({
 function Postpage({ frontmatter: {title, date, cover_image}, slug, content }) {
   
   return (
-    <Container maxW="container.lg">
+    <div >
       <Link href="/">
         Go Back
       </Link>
     
       <div>
-        <Text fontSize="32px" fontWeight="600">{title}</Text>
-        <Text>Posted on {date}</Text>
+        <p>{title}</p>
+        <p>Posted on {date}</p>
         <img src={cover_image} alt="" className={style.img__hero}/>
         
         <div className={style.container}>
           <div dangerouslySetInnerHTML={{ __html: marked(content)}}></div>
         </div>
       </div>
-    </Container>
+    </div>
   )
 } 
  

@@ -1,11 +1,11 @@
 import React from 'react'
-
+import Link from 'next/link'
 function Hero() {
   return (
-    <div className='flex h-[30rem] mt-20 '>
+    <div className='flex h-[30rem] mt-20'>
         {/* Web-development box */}
         <div className='h-full relative w-[60rem] mr-4'>
-          <a className=''>
+          <Link href="/Hero/web">
             <div className='w-full h-full absolute bg-black opacity-0 rounded-lg'/>
             <div className='flex absolute w-full h-full py-3 px-2'>
               <div className='relative w-full h-full py-10 px-5'>
@@ -23,13 +23,13 @@ function Hero() {
               </svg>
             </div>
             <img src='/images/hero/react.jpg' alt='Shadow' className='h-full w-full object-cover rounded-lg'/>  
-          </a>
+          </Link>
         </div>
 
         {/* Mobile-development box */}
         <div className='flex flex-col w-full h-full'>
           <div className='relative h-1/2'>
-            <a>
+            <Link href='/Hero/mobile'>
               <div className='w-full h-full absolute bg-black opacity-40 rounded-lg'/>
               <div className=''>
                 <div className='absolute flex flex-col h-full justify-between p-5'>
@@ -49,13 +49,13 @@ function Hero() {
                 </div>
               </div>
               <img src='/images/hero/phone.jpg' alt='Shadow' className='h-full w-full object-cover rounded-lg'/>  
-            </a>
+            </Link>
           </div>
           
-          
+          {/* productivity box */}
           <div className='flex h-1/2 pt-4 gap-4'>
             <div className='h-full w-full relative'>
-              <a> 
+              <Link href="/Hero/productivity"> 
                 <div className='w-full h-full absolute bg-black opacity-40 rounded-lg'/>
                 <div className='absolute flex flex-col justify-between h-full w-full p-1 pb-5 pl-5'>
                   <svg xmlns="http://www.w3.org/2000/svg" height="38" viewBox="0 96 960 960" width="38" className='fill-white rotate-[140deg] self-end'>
@@ -65,10 +65,11 @@ function Hero() {
                   <p className='text-white text-4xl font-bold'>Productivity</p>
                 </div>
                 <img src='/images/hero/git.jpg' alt='Shadow' className='h-full w-full object-cover rounded-lg'/>  
-              </a>
+              </Link>
             </div>
+            {/* story box */}
             <div className='relative h-full w-full'>
-              <a>
+              <Link href="/Hero/story">
                 <div className='w-full h-full absolute bg-black opacity-0 rounded-lg'/>
                 <div className='absolute flex flex-col justify-between h-full w-full p-1 pb-5 pl-5'>
                   <svg xmlns="http://www.w3.org/2000/svg" height="38" viewBox="0 96 960 960" width="38" className='fill-white rotate-[140deg] self-end'>
@@ -78,7 +79,7 @@ function Hero() {
                   <p className='text-white text-4xl font-bold'>Story</p>
                 </div>
                 <img src='/images/hero/phone_programming.jpg' alt='Shadow' className='h-full w-full object-cover rounded-lg'/>  
-              </a>
+              </Link>
             </div>
           </div> 
         </div>
