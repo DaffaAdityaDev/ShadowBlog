@@ -3,7 +3,6 @@ title: 'Why you should React'
 date: 'October 4, 2022'
 excerpt: 'React is one of the most popular front-end frameworks out there'
 cover_image: '/images/why-you-should-use-react/hero-codeeditor.jpg'
-read_time: '5 min'
 tech: "Javascript"
 ---
 
@@ -40,6 +39,3 @@ Node.js is a JavaScript runtime environment. It's used to run JavaScript code ou
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts">
 </iframe>
 
-> Dorothy followed her through many of the beautiful rooms in her castle.
->
-> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
