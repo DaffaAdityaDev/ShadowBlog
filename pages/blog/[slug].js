@@ -3,16 +3,17 @@ import { redirect } from 'next/dist/server/api-utils';
 import path from 'path';
 import matter from 'gray-matter'
 import {marked} from 'marked'
-import Link from 'next/link'
-import { splitTech, typeColor } from '../../utils'  
+import { splitTech, typeColor } from '../../utils' 
 
 import style from '../../styles/blog.module.scss'
+
 
 marked.setOptions({
   sanitize: false,
 })
 function Postpage({ frontmatter: {title, date, cover_image, tech, read_time}, slug, content }) {
 
+  console.log(typeColor("Javascript"))
 
   return (
     <div className='text-white'>
@@ -22,6 +23,7 @@ function Postpage({ frontmatter: {title, date, cover_image, tech, read_time}, sl
             <h1 className='text-[25px] font-bold'>{title}</h1>
             <div className='w-full h-[0.1rem] bg-gray-500' />
             <p className=''>Posted on {date}</p>
+
             <div className='flex gap-3 justify-end'>
               {
                 splitTech(tech).map((tech, index) => {
@@ -35,7 +37,6 @@ function Postpage({ frontmatter: {title, date, cover_image, tech, read_time}, sl
           </div>
           <div className='relative mt-20'>
             <div className='bg-gradient-to-t from-black from-1% to-transparent to-25% w-full h-full absolute z-10' /> 
-            
             <img src={cover_image} alt="" className="rounded-xl"/>
           </div>
         </div>
@@ -47,20 +48,6 @@ function Postpage({ frontmatter: {title, date, cover_image, tech, read_time}, sl
   )
 } 
 
-
-// function splitTech(tech) {
-//   let techArray = [];
-
-//   if (typeof tech === 'string') {
-//     let splitTech = tech.split(",");
-
-//     for (let i = 0; i < splitTech.length; i++) {
-//       techArray.push(splitTech[i].trim());
-//     }
-//   }
-
-//   return techArray;
-// }
  
 export async function getStaticPaths() {
   const files = fs.readdirSync(path.join('posts'))
@@ -71,8 +58,7 @@ export async function getStaticPaths() {
     },
   }))
 
-  return {
-    
+  return {  
     paths,
     fallback: false,
 
