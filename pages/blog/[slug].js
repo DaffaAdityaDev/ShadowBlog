@@ -8,12 +8,16 @@ import { splitTech, typeColor } from '../../utils'
 import style from '../../styles/blog.module.scss'
 
 
+
 marked.setOptions({
   sanitize: false,
 })
+
 function Postpage({ frontmatter: {title, date, cover_image, tech, read_time}, slug, content }) {
 
-  console.log(typeColor("Javascript"))
+  // console.log(typeColor("Javascript"))
+
+  const markdown = `Just a link: https://reactjs.com.`
 
   return (
     <div className='text-white'>

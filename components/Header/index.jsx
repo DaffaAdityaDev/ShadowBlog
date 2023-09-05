@@ -9,14 +9,14 @@ function Header() {
             <h2 className='logo h-full text-4xl'>Shadow Blog</h2>
           </Link>
         </div>
-        <div className='flex gap-4'>
+        {/* <div className='flex gap-4'>
           <p className='text-xl font-bold'>Blogs</p>
           <p className='text-xl font-bold'>Web</p>
           <p className='text-xl font-bold'>Mobile</p>
         </div>
         <div className=''>
           <input type='text' placeholder='Search' className='text-white h-full py-2 px-5 rounded-full bg-slate-500' />
-        </div>
+        </div> */}
       </div>
     </header>
   )
