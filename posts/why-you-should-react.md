@@ -44,3 +44,5 @@ Node.js is a JavaScript runtime environment. It's used to run JavaScript code ou
   style="width: 100%; border:0; transform: scale(1); overflow:hidden;"
   sandbox="allow-scripts allow-same-origin">
 </iframe>
+
+<img src='/images/posts/img1.jpg' alt='code editor' />
