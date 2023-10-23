@@ -16,7 +16,6 @@ export function splitTech(tech) {
   return techArray;
 }
   
-  
 export function typeColor(tech) {
     
   let techToLowerCase = tech.toLowerCase().toString()
@@ -35,4 +34,11 @@ export function typeColor(tech) {
     default:
       return "";
   }
+}
+
+function saveMarkdownFile(content) {
+  fs.writeFile('test.md', content, (err) => {
+    if (err) throw err;
+    console.log('The file has been saved!');
+  });
 }

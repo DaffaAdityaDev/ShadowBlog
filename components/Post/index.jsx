@@ -11,7 +11,19 @@ function Post({ post }) {
       <div className='w-[350px] rounded-lg h-full'>
         <div className='object-cover w-full relative'>
         <div className='bg-gradient-to-t from-black from-1% to-transparent to-25% w-full h-full absolute rounded-t-lg'/>
-          <Image src={post.frontmatter.cover_image} alt='image' className='rounded-lg' width={350} height={200}/>
+        <img 
+          src={
+            post.frontmatter.cover_image.startsWith('/') || 
+            post.frontmatter.cover_image.startsWith('http://') || 
+            post.frontmatter.cover_image.startsWith('https://')
+              ? post.frontmatter.cover_image 
+              : '/images/why-you-should-use-react/hero-codeeditor.jpg'
+          } 
+          alt='image' 
+          className='rounded-lg' 
+          width={350} 
+          height={200}
+        />
         </div>
         <div className='flex flex-col justify-between bg-black rounded-b-lg'>
           <div className='m-4'>

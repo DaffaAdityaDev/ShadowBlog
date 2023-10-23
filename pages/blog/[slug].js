@@ -15,8 +15,6 @@ marked.setOptions({
 
 function Postpage({ frontmatter: {title, date, cover_image, tech, read_time}, slug, content }) {
 
-  // console.log(typeColor("Javascript"))
-
   const markdown = `Just a link: https://reactjs.com.`
 
   return (
