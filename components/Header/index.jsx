@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import ToggleButton from '../Button/ToggleDark'
 
 function Header() {
   return (
@@ -9,6 +10,7 @@ function Header() {
             <h2 className='logo h-full text-4xl'>Shadow Blog</h2>
           </Link>
         </div>
+        
         {/* <div className='flex gap-4'>
           <p className='text-xl font-bold'>Blogs</p>
           <p className='text-xl font-bold'>Web</p>

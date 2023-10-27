@@ -10,6 +10,7 @@ import Post from '../components/Post'
 import Hero from '../components/Hero'
 
 import Blog from '../components/Blog'
+import ToggleButton from '../components/Button/ToggleDark'
 
 export default function Home({ posts }) {
   const [selectedCategory, setSelectedCategory] = useState('web')
@@ -33,9 +34,10 @@ export default function Home({ posts }) {
         
       </Head>
 
+       
       <Hero />
       <div className="flex flex-col gap-6 mt-20 mb-10 pl-10">
-        <p className='text-4xl font-bold'>Blogs</p>
+        <p className='text-4xl text-white font-bold'>Blogs</p>
         <div>
           <button className={`bg-black text-white px-4 py-2 rounded-lg ml-2 ${selectedCategory === 'web' ? 'bg-blue-500' : ''}`} onClick={() => filterPosts('web')}>Web</button>  
           <button className={`bg-black text-white px-4 py-2 rounded-lg ml-2 ${selectedCategory === 'mobile' ? 'bg-blue-500' : ''}`} onClick={() => filterPosts('mobile')}>Mobile</button>
